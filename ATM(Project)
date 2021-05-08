@@ -1,0 +1,93 @@
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+    int deposit=0;
+    int amount=5000;
+    int withdraw= 0;
+    int choice=0;
+    int pin=0;
+    int keypin;
+    keypin = 2108;
+
+    cout << "Enter your pin: ";
+    cin >> pin;
+
+    if (pin==2108)
+    {
+    cout << "\nPin Approved!\n";
+    menu:
+
+    cout << "\n\t\t\t****************************************";
+    cout << "\n\t\t\t   Welcome   to   Sonu's Bank   ATM     ";
+    cout << "\n\t\t\t     1. Check Balance                   ";
+    cout << "\n\t\t\t     2. Withdraw                        ";
+    cout << "\n\t\t\t     3. Deposit                         ";
+    cout << "\n\t\t\t     4. Exit                            ";
+    cout << "\n\t\t\t                                        ";
+    cout << "\n\t\t\t*****************************************";
+    cout << "\n\n";
+
+
+        cout << "\nEnter Number: ";
+        cin >> choice;
+
+        if (choice==1)
+        {
+            cout <<"\nYour current balance is: " << amount;
+            cout <<"\nYOUR TRANSACTION WAS SUCCESSFULL";
+            goto menu;
+        }
+
+        else if (choice==2)
+        {
+            cout << "\nEnter the amount you want to withdraw: ";
+            cin >> withdraw;
+
+            if (withdraw>amount)
+            {
+                cout << "\n Insufficient balance.!!!!!\n";
+                goto menu;
+            }
+
+            else
+            {
+            amount=amount-withdraw;
+            cout << "\nYour current balance is: " << amount;
+            cout <<"\nYOUR TRANSACTION WAS SUCCESSFULL";
+
+            goto menu;
+            }
+        }
+
+        else if (choice==3)
+        {
+            cout << "\nEnter the amount you want to deposit: ";
+            cin >> deposit;
+
+            amount=amount+deposit;
+            cout <<"YOUR TRANSACTION WAS SUCCESSFULL";
+
+            cout << "\nYour current balance is: " << amount;
+
+
+            goto menu;
+        }
+
+        else if (choice==4)
+        {
+            cout << "\nTHANK YOU!!!!!!! ";
+        }
+
+    }
+
+    else
+    {
+        cout << "\nInvalid pin!" << "\nPlease try again.";
+    }
+
+    return 0;
+
+
+}
