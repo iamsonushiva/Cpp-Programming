@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n,area,r,l,b;
+    cout<<"Enter the shape to find the area\n [1].CIRCLE\n [2].RECTANGLE\n [3].TRIANGLE\n";
+    cin>>n;
+    switch(n)
+    {
+        case 1 :
+            {
+            cout<<"Enter the radius of the circle\n";
+            cin>>r;
+            area=3.14 * r *r ;
+            cout<<"the area of circle is  " <<area;
+            }
+            break;
+        case 2 :
+            {
+            cout<<"Enter the Length of the rectangle\n";
+            cin>>l;
+
+            cout<<"Enter the base of the rectangle\n";
+            cin>>b;
+            area= l * b ;
+            cout<<"the area of Rectangle is  " <<area;
+
+            }
+            break;
+        case 3 :
+            {
+            cout<<"Enter the height of the triangle\n";
+            cin>>l;
+
+            cout<<"Enter the base of the triangle\n";
+            cin>>b;
+            area= (l * b) / 2 ;
+            cout<<"the area of Rectangle is  " <<area;
+
+            }
+            break;
+        default :
+            cout<<"\nwrong option!!!!!!!";
+    }
+    return 0;
+}
